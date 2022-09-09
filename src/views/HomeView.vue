@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <div class="pagination">
+      <div class="pagination" v-if="movieList.length">
         <div :class="['page',  {'active': page === currentPage}]" v-for="page in totalPages"  :key="page" @click="currentPage = page">
           {{page}}
         </div>
